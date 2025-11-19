@@ -1,0 +1,37 @@
+{
+    "name": "electron-app",
+    "version": "1.0.0",
+    "description": "An Electron application",
+    "author": "Your Name",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^39.0.0",
+        "electron-builder": "^24.9.1"
+    },
+    "scripts": {
+        "start": "electron .",
+        "build:macos": "electron-builder --mac",
+        "build:windows": "electron-builder --win",
+        "build:linux": "electron-builder --linux"
+    },
+    "build": {
+        "appId": "com.yourcompany.electron-app",
+        "productName": "electron-app",
+        "files": [
+            "main.js",
+            "package.json"
+        ],
+        "mac": {
+            "icon": "build/icon.png",
+            "target": "dmg"
+        },
+        "win": {
+            "icon": "build/icon.png",
+            "target": "nsis"
+        },
+        "linux": {
+            "icon": "build/icon.png",
+            "target": "AppImage"
+        }
+    }
+}
