@@ -42,3 +42,12 @@ next-env.d.ts
 
 # temporary build outputs
 /temp-builds
+
+# generated downloads
+/public/downloads/*.exe
+/public/downloads/*.dmg
+/public/downloads/*.AppImage
+
+# electron-app
+/electron-app/node_modules
+/electron-app/dist
